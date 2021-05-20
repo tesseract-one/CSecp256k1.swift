@@ -31,6 +31,7 @@ Swift C module for bitcoin secp256k1 library. Exports C methods for Swift.
   s.pod_target_xcconfig = {
     'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) HAVE_CONFIG_H',
     'GCC_WARN_UNUSED_FUNCTION' => 'NO',
-    'GCC_WARN_UNUSED_VARIABLE' => 'NO'
+    'GCC_WARN_UNUSED_VARIABLE' => 'NO',
+    'GCC_WARN_64_TO_32_BIT_CONVERSION' => 'NO'
   }
 end
