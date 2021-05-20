@@ -26,7 +26,7 @@ Swift C module for bitcoin secp256k1 library. Exports C methods for Swift.
   
   s.public_header_files = 'Sources/CSecp256k1/include/*.h', 'Sources/CSecp256k1/secp256k1/include/*.h'
   
-  s.exclude_files = 'Sources/CSecp256k1/secp256k1/src/test*', 'Sources/CSecp256k1/secp256k1/src/asm/*', 'Sources/CSecp256k1/secp256k1/src/bench*', 'Sources/CSecp256k1/secp256k1/src/selftest.h'
+  s.exclude_files = 'Sources/CSecp256k1/secp256k1/src/test*', 'Sources/CSecp256k1/secp256k1/src/asm/*', 'Sources/CSecp256k1/secp256k1/src/bench*'
 
   s.pod_target_xcconfig = {
     'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) HAVE_CONFIG_H'
