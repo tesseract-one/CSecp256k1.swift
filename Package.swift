@@ -21,7 +21,6 @@ let package = Package(
             publicHeadersPath: "include",
             cSettings: [
                 .define("HAVE_CONFIG_H"),
-                .headerSearchPath("include"),
                 .headerSearchPath("config"),
                 .headerSearchPath("secp256k1/include"),
                 .headerSearchPath("secp256k1/src")
