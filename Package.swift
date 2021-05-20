@@ -24,6 +24,9 @@ let package = Package(
                 .headerSearchPath("config"),
                 .headerSearchPath("secp256k1/include"),
                 .headerSearchPath("secp256k1/src")
-            ])
+            ]),
+        .testTarget(
+            name: "CSecp256k1Tests",
+            dependencies: ["CSecp256k1"])
     ]
 )

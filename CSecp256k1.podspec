@@ -34,4 +34,9 @@ Swift C module for bitcoin secp256k1 library. Exports C methods for Swift.
     'GCC_WARN_UNUSED_VARIABLE' => 'NO',
     'GCC_WARN_64_TO_32_BIT_CONVERSION' => 'NO'
   }
+  
+  s.test_spec 'CSecp256k1Tests' do |test_spec|
+    test_spec.platforms = {:ios => '9.0', :osx => '10.10', :tvos => '9.0'}
+    test_spec.source_files = 'Tests/CSecp256k1Tests/**/*.swift'
+  end
 end
