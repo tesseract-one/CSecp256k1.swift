@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'CSecp256k1'
-  s.version          = '0.0.1'
+  s.version          = '0.1.0'
   s.summary          = 'Swift C module for bitcoin secp256k1 library.'
   
   s.description      = <<-DESC
