@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'CSecp256k1'
-  s.version          = '0.1.0'
+  s.version          = '999.99.9'
   s.summary          = 'Swift C module for bitcoin secp256k1 library.'
   
   s.description      = <<-DESC
@@ -13,12 +13,10 @@ Swift C module for bitcoin secp256k1 library. Exports C methods for Swift.
   s.author           = { 'Tesseract Systems, Inc.' => 'info@tesseract.one' }
   s.source           = { :git => 'https://github.com/tesseract-one/CSecp256k1.swift.git', :tag => s.version.to_s, :submodules => true }
 
-  s.ios.deployment_target = '9.0'
-  s.osx.deployment_target = '10.10'
-  s.tvos.deployment_target = '9.0'
-  s.watchos.deployment_target = '2.0'
-  
-  s.swift_versions = ['5', '5.1', '5.2', '5.3']
+  s.swift_version    = '5.4'
+
+  base_platforms     = { :ios => '11.0', :osx => '10.13', :tvos => '11.0' }
+  s.platforms        = base_platforms.merge({ :watchos => '6.0' })
   
   s.module_name = 'CSecp256k1'
   
@@ -35,8 +33,8 @@ Swift C module for bitcoin secp256k1 library. Exports C methods for Swift.
     'GCC_WARN_64_TO_32_BIT_CONVERSION' => 'NO'
   }
   
-  s.test_spec 'CSecp256k1Tests' do |test_spec|
-    test_spec.platforms = {:ios => '9.0', :osx => '10.10', :tvos => '9.0'}
-    test_spec.source_files = 'Tests/CSecp256k1Tests/**/*.swift'
+  s.test_spec 'CSecp256k1Tests' do |ts|
+    ts.platforms = base_platforms
+    ts.source_files = 'Tests/CSecp256k1Tests/**/*.swift'
   end
 end
