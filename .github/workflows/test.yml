@@ -38,6 +38,10 @@ jobs:
       image: swift:${{ matrix.swift }}
       options: --cap-add=SYS_PTRACE --security-opt seccomp=unconfined --security-opt apparmor=unconfined
     steps:
+      - name: Ubuntu Packages
+        run: |
+          apt-get update && apt-get install -y software-properties-common && \
+          add-apt-repository -y ppa:git-core/ppa && apt-get update && apt-get upgrade -y git
       - name: Checkout
         uses: actions/checkout@v3
         with:
